@@ -6,25 +6,25 @@ import Header from '../../components/Header'
 import Button from '../../components/button'
 
 const handlePress = (): void => {
-  // ログイン
+// 会員登録
   router.push('memo/list')
 }
 
-const LogIn = (): JSX.Element => {
+const Signup = (): JSX.Element => {
   return (
     <View style={styles.container}>
         <Header />
         <View style={styles.inner}>
-        <Text style={styles.title}>Log In</Text>
+        <Text style={styles.title}>Sign Up</Text>
         <TextInput style={styles.Input} value='Email address' />
         <TextInput style={styles.Input} value='Password' />
-        <Button label='ログイン' onPress={handlePress} />
+        <Button label='登録する' onPress={handlePress} />
         <View style={styles.footer}>
-            <Text style={styles.footertext}>Not registered?</Text>
-            <Link href='/Auth/sign_up' asChild>
-            <TouchableOpacity>
-            <Text style={styles.footerLink}>Signup here!</Text>
-            </TouchableOpacity>
+            <Text style={styles.footertext}>Already registered?</Text>
+            <Link href="/Auth/log_in" asChild>
+              <TouchableOpacity>
+                <Text style={styles.footerLink}>Log in.</Text>
+              </TouchableOpacity>
             </Link>
         </View>
         </View>
@@ -57,19 +57,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
     marginBottom: 16
   },
-  button: {
-    backgroundColor: '#467FD3',
-    borderRadius: 4,
-    alignSelf: 'center',
-    marginBottom: 24
-  },
-  buttonlabel: {
-    fontSize: 16,
-    lineHeight: 24,
-    color: '#ffffff',
-    paddingVertical: 8,
-    paddingHorizontal: 72
-  },
   footer: {
     flexDirection: 'row'
   },
@@ -87,4 +74,4 @@ const styles = StyleSheet.create({
 
 })
 
-export default LogIn
+export default Signup
