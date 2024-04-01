@@ -2,7 +2,7 @@
   "expo": {
     "name": "Omoship",
     "slug": "Omoship",
-    "scheme":"Omoship",
+    "scheme": "Omoship",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -28,7 +28,8 @@
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
-      "expo-router"
+      "expo-router",
+      "expo-font"
     ]
   }
 }
