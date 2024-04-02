@@ -8,7 +8,6 @@ const LogoutButton = (): JSX.Element => {
   )
 }
 
-
 const styles = StyleSheet.create({
   text: {
     fontSize: 12,

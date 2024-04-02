@@ -11,8 +11,8 @@ const handlePress = (): void => {
 }
 
 const Signup = (): JSX.Element => {
-  const [ email, setEmail ] = useState('')
-  const [ password, setPassword ] = useState('')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
   return (
     <View style={styles.container}>
         <View style={styles.inner}>
