@@ -16,17 +16,18 @@ const Button = (props: Props): JSX.Element => {
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: '#467FD3',
+    backgroundColor: '#2680EB',
     borderRadius: 4,
     alignSelf: 'center',
-    marginBottom: 24
+    marginTop: 24,
+    marginBottom: 12
   },
   buttonlabel: {
     fontSize: 16,
-    lineHeight: 24,
+    lineHeight: 18,
     color: '#ffffff',
     paddingVertical: 8,
-    paddingHorizontal: 72,
+    paddingHorizontal: 120,
     fontWeight: 'bold'
   }
 })

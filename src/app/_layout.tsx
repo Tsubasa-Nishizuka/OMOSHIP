@@ -3,10 +3,10 @@ import { Stack } from 'expo-router'
 const Layout = (): JSX.Element => {
   return <Stack screenOptions={{
     headerStyle: {
-      backgroundColor: '#467FD3'
+      backgroundColor: '#000000'
     },
     headerTintColor: '#ffffff',
-    headerTitle: 'Omoship',
+    headerTitle: 'ヘッダータイトル',
     headerBackTitleVisible: false,
     headerTitleStyle: {
       fontSize: 22,

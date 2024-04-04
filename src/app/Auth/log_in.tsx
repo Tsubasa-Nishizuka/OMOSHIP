@@ -28,7 +28,7 @@ const LogIn = (): JSX.Element => {
   return (
     <View style={styles.container}>
         <View style={styles.inner}>
-        <Text style={styles.title}>Log In</Text>
+        <Text style={styles.title}>Omoship</Text>
         <TextInput
           style={styles.Input}
           value={email}
@@ -49,12 +49,18 @@ const LogIn = (): JSX.Element => {
          />
         <Button label='ログイン' onPress={() => { handlePress(email, password) }} />
         <View style={styles.footer}>
-            <Text style={styles.footertext}>Not registered?</Text>
+            <Text style={styles.footertext}>アカウントをお持ちではないですか？</Text>
             <Link href='/Auth/sign_up' asChild replace>
             <TouchableOpacity>
-            <Text style={styles.footerLink}>Signup here!</Text>
+            <Text style={styles.footerLink}>登録する</Text>
             </TouchableOpacity>
             </Link>
+            <Link href='/memo/top' asChild replace>
+            <TouchableOpacity>
+            <Text style={styles.footerLink}>登録する</Text>
+            </TouchableOpacity>
+            </Link>
+
         </View>
         </View>
     </View>
@@ -65,21 +71,25 @@ const LogIn = (): JSX.Element => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F0F4F8'
+    backgroundColor: '#000000'
   },
   inner: {
     paddingVertical: 24,
-    paddingHorizontal: 27
+    paddingHorizontal: 27,
+    paddingTop: 92.5
   },
   title: {
     fontSize: 24,
     lineHeight: 32,
     fontWeight: 'bold',
-    marginBottom: 24
+    marginBottom: 24,
+    alignSelf: 'center',
+    color: '#ffffff'
   },
   Input: {
     borderWidth: 1,
     borderColor: '#dddddd',
+    borderRadius: 5,
     backgroundColor: '#ffffff',
     height: 48,
     padding: 8,
@@ -87,17 +97,17 @@ const styles = StyleSheet.create({
     marginBottom: 16
   },
   button: {
-    backgroundColor: '#467FD3',
+    backgroundColor: '#2680EB',
     borderRadius: 4,
     alignSelf: 'center',
     marginBottom: 24
   },
   buttonlabel: {
     fontSize: 16,
-    lineHeight: 24,
+    lineHeight: 26,
     color: '#ffffff',
     paddingVertical: 8,
-    paddingHorizontal: 72
+    paddingHorizontal: 24
   },
   footer: {
     flexDirection: 'row'
@@ -105,13 +115,14 @@ const styles = StyleSheet.create({
   footertext: {
     fontSize: 14,
     lineHeight: 24,
-    marginRight: 8
-
+    marginRight: 8,
+    color: '#ffffff'
   },
   footerLink: {
     fontSize: 14,
     lineHeight: 24,
-    color: '#467FD3'
+    fontWeight: 'bold',
+    color: '#2680EB'
   }
 
 })

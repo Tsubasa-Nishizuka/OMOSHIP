@@ -31,7 +31,7 @@ const Signup = (): JSX.Element => {
   return (
     <View style={styles.container}>
         <View style={styles.inner}>
-        <Text style={styles.title}>Sign Up</Text>
+        <Text style={styles.title}>Omoship</Text>
         <TextInput
           style={styles.Input}
           value={email}
@@ -52,10 +52,10 @@ const Signup = (): JSX.Element => {
          />
         <Button label='登録する' onPress={() => { handlePress(email, password) } } />
         <View style={styles.footer}>
-            <Text style={styles.footertext}>Already registered?</Text>
+            <Text style={styles.footertext}>すでに登録済みですか?</Text>
             <Link href="/Auth/log_in" asChild replace>
               <TouchableOpacity>
-                <Text style={styles.footerLink}>Log in.</Text>
+                <Text style={styles.footerLink}>ログイン</Text>
               </TouchableOpacity>
             </Link>
         </View>
@@ -68,21 +68,25 @@ const Signup = (): JSX.Element => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F0F4F8'
+    backgroundColor: '#000000'
   },
   inner: {
     paddingVertical: 24,
-    paddingHorizontal: 27
+    paddingHorizontal: 27,
+    paddingTop: 92.5
   },
   title: {
     fontSize: 24,
     lineHeight: 32,
     fontWeight: 'bold',
-    marginBottom: 24
+    marginBottom: 24,
+    alignSelf: 'center',
+    color: '#ffffff'
   },
   Input: {
     borderWidth: 1,
     borderColor: '#dddddd',
+    borderRadius: 5,
     backgroundColor: '#ffffff',
     height: 48,
     padding: 8,
@@ -95,15 +99,15 @@ const styles = StyleSheet.create({
   footertext: {
     fontSize: 14,
     lineHeight: 24,
-    marginRight: 8
-
+    marginRight: 8,
+    color: '#ffffff'
   },
   footerLink: {
     fontSize: 14,
     lineHeight: 24,
-    color: '#467FD3'
+    fontWeight: 'bold',
+    color: '#2680EB'
   }
-
 })
 
 export default Signup
