@@ -6,13 +6,12 @@ const Layout = (): JSX.Element => {
       backgroundColor: '#000000'
     },
     headerTintColor: '#ffffff',
-    headerTitle: 'ヘッダータイトル',
+    headerTitle: '',
     headerBackTitleVisible: false,
     headerTitleStyle: {
-      fontSize: 22,
+      fontSize: 18,
       fontWeight: 'bold'
     }
-
   }}/>
 }
 

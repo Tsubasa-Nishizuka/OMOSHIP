@@ -9,12 +9,14 @@ const Footer = (): JSX.Element => {
                 <TouchableOpacity style={styles.foooterflame}>
                   <Text style={styles.footerItem}>①</Text>
                   </TouchableOpacity></Link>
+                  <Link href='/search/searchItem' asChild replace>
                   <TouchableOpacity style={styles.foooterflame}>
                   <Text style={styles.footerItem}>②</Text>
-                  </TouchableOpacity>
+                  </TouchableOpacity></Link>
+                  <Link href='/Commerce/LiveCommerce' asChild replace>
                   <TouchableOpacity style={styles.foooterflame}>
                   <Text style={styles.footerItem}>③</Text>
-                  </TouchableOpacity>
+                  </TouchableOpacity></Link>
                   <TouchableOpacity style={styles.foooterflame}>
                   <Text style={styles.footerItem}>④</Text>
                   </TouchableOpacity>

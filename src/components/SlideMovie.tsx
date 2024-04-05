@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
     paddingTop: 15
   },
   SliderItem: {
-    paddingLeft: 9,
+    paddingLeft: 9
 
   },
   SliderInput: {
@@ -144,7 +144,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     marginHorizontal: 5,
-    marginVertical:4
+    marginVertical: 4
 
   },
   Iconbutton: {

@@ -1,24 +1,45 @@
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native'
+
+import { Link } from 'expo-router'
 
 const CategoryHead = (): JSX.Element => {
   return (
-    <View>
-      <View style={styles.inner2}>
-        <TouchableOpacity style={styles.InputButtonStyle}>
-      <Text style={styles.Input2}>アイテム</Text>
-      </TouchableOpacity>
-       <TouchableOpacity style={styles.InputButtonStyle}>
-      <Text style={styles.Input2}>ブランド</Text>
+    <View style={styles.flame}>
+      <ScrollView style={styles.inner2} horizontal={true}>
+         <Link href='/search/searchItem' asChild replace>
+           <TouchableOpacity style={styles.InputButtonStyle}>
+            <Text style={styles.Input2}>アイテム</Text>
+           </TouchableOpacity>
+         </Link>
+         <Link href='/search/searchBrand' asChild replace>
+           <TouchableOpacity style={styles.InputButtonStyle}>
+             <Text style={styles.Input2}>ブランド</Text>
+           </TouchableOpacity>
+         </Link>
+         <Link href='/search/searchShop' asChild replace>
+           <TouchableOpacity style={styles.InputButtonStyle}>
+             <Text style={styles.Input2}>ショップ</Text>
+          </TouchableOpacity>
+         </Link>
+         <Link href='/search/searchUser' asChild replace>
+           <TouchableOpacity style={styles.InputButtonStyle}>
+             <Text style={styles.Input2}>ユーザー</Text>
+           </TouchableOpacity>
+         </Link>
+         <Link href='/search/searchUser' asChild replace>
+          <TouchableOpacity style={styles.InputButtonStyle}>
+            <Text style={styles.Input2}>ショート</Text>
        </TouchableOpacity>
-       <TouchableOpacity style={styles.InputButtonStyle}>
-      <Text style={styles.Input2}>ショップ</Text>
-       </TouchableOpacity>
-      </View>
+         </Link>
+      </ScrollView>
     </View>
   )
 }
 
 const styles = StyleSheet.create({
+  flame: {
+    height: 50
+  },
   inner2: {
     paddingVertical: 11,
     paddingHorizontal: 3,
@@ -35,8 +56,8 @@ const styles = StyleSheet.create({
     height: 30,
     paddingTop: 3,
     paddingBottom: 3,
-    paddingHorizontal: 15,
-    fontSize: 18,
+    paddingHorizontal: 10,
+    fontSize: 16.5,
     fontWeight: 'bold'
   }
 
