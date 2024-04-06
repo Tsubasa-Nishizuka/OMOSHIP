@@ -40,9 +40,8 @@ const styles = StyleSheet.create({
   },
   TopMenu: {
     left: 10,
-    top: 10,
     flexDirection: 'row',
-    backgroundColor: 'rgba(0, 0, 0, 0.7)',
+    backgroundColor: 'rgba(0, 0, 0, 0.1)',
     width: '60%',
     borderRadius: 25,
     alignItems: 'center',
@@ -57,9 +56,14 @@ const styles = StyleSheet.create({
     borderRadius: 20
   },
   UserId: {
+    fontWeight: 'bold',
     fontSize: 16,
     marginLeft: 5,
-    color: '#ffffff'
+    color: '#ffffff',
+    shadowColor: '#000000',
+    shadowOpacity: 1,
+    shadowRadius: 0.15,
+    shadowOffset: { width: 0, height: 0.1 }
   },
   liveinfo: {
     flexDirection: 'row'
@@ -71,7 +75,11 @@ const styles = StyleSheet.create({
   foollowbutton: {
     borderRadius: 17,
     marginRight: 6,
-    backgroundColor: '#53A8D8'
+    backgroundColor: '#53A8D8',
+    shadowColor: '#000000',
+    shadowOpacity: 1,
+    shadowRadius: 0.2,
+    shadowOffset: { width: 0, height: 0.1 }
   },
   foollowText: {
     color: '#ffffff',
@@ -85,23 +93,28 @@ const styles = StyleSheet.create({
     color: 'red'
   },
   Livepeo2: {
-    fontSize: 13,
+    fontSize: 12,
     marginHorizontal: 2,
-    color: '#ffffff'
+    color: '#ffffff',
+    shadowColor: '#000000',
+    shadowOpacity: 1,
+    shadowRadius: 0.15,
+    shadowOffset: { width: 0, height: 0.15 },
+    fontWeight: 'bold'
   },
 
   topIcon2: {
-    top: 10,
-    right: 10,
-    fontSize: 25,
+    right: 15,
+    fontSize: 30,
     color: 'gray'
   },
   LivePeople: {
+    height: 25,
     borderRadius: 20,
     alignItems: 'center',
     flexDirection: 'row',
-    top: 10,
-    backgroundColor: 'rgba(0, 0, 0, 0.7)',
+    top: 5,
+    backgroundColor: 'rgba(0, 0, 0, 0.1)',
     paddingHorizontal: 10
   }
 })

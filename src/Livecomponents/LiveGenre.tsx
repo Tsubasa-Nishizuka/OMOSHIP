@@ -19,11 +19,12 @@ const styles = StyleSheet.create({
   },
   Genre: {
     top: 10,
-    flexDirection: 'row'
+    flexDirection: 'row',
+    left: 5
   },
   Genre1: {
     top: 5,
-    backgroundColor: '#000000',
+    backgroundColor: 'rgba(0, 0, 0, 0.7)',
     borderRadius: 10,
     left: 5
   },
@@ -37,7 +38,7 @@ const styles = StyleSheet.create({
   Genre2: {
     marginLeft: 7,
     top: 5,
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    backgroundColor: 'rgba(0, 0, 0, 0.3)',
     borderRadius: 10,
     left: 5
   },

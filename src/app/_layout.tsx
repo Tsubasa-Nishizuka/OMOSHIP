@@ -12,7 +12,8 @@ const Layout = (): JSX.Element => {
       fontSize: 18,
       fontWeight: 'bold'
     }
-  }}/>
+  }}
+  />
 }
 
 export default Layout

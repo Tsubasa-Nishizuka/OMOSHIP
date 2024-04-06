@@ -60,6 +60,11 @@ const LogIn = (): JSX.Element => {
             <Text style={styles.footerLink}>登録する</Text>
             </TouchableOpacity>
             </Link>
+            <Link href='/Commerce/ItemDetail' asChild replace>
+            <TouchableOpacity>
+            <Text style={styles.footerLink}>登録する</Text>
+            </TouchableOpacity>
+            </Link>
 
         </View>
         </View>

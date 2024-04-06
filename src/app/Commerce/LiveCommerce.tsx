@@ -1,67 +1,60 @@
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context'
+import { View, StyleSheet } from 'react-native'
+import { Stack } from 'expo-router'
 
 import React from 'react'
 import LiveTop from '../../Livecomponents/LiveTop'
 import LiveGenre from '../../Livecomponents/LiveGenre'
+import LiveFooter from '../../Livecomponents/LiveFooter'
 
 const LiveCommerce = (): JSX.Element => {
-  return (
-<View style={styles.container}>
-    <LiveTop />
-    <LiveGenre />
-    <View style={styles.Flame}>
-        <View style={styles.Position}>
-            <View style={styles.Icon}><Text>あ</Text></View>
-            <View style={styles.Text}><Text>ここにコメントが2行で入ります。{'\n'}ここにコメントが入ります。</Text></View>
-        </View>
-        <View style={styles.Position}>
-            <View style={styles.Icon}><Text>あ</Text></View>
-            <View style={styles.Text}><Text>ここにコメントが2行で入ります。{'\n'}ここにコメントが入ります。</Text></View>
-        </View>
-        <View style={styles.Position}>
-            <View style={styles.Icon}><Text>あ</Text></View>
-            <View style={styles.Text}><Text>ここにコメントが2行で入ります。{'\n'}ここにコメントが入ります。</Text></View>
-        </View>
-        <View style={styles.Position}>
-            <View style={styles.Icon}><Text>あ</Text></View>
-            <View style={styles.Text}><Text>ここにコメントが2行で入ります。{'\n'}ここにコメントが入ります。</Text></View>
-        </View>
-        <View style={styles.Position}>
-            <View style={styles.Icon}><Text>あ</Text></View>
-            <View style={styles.Text}><Text>ここにコメントが2行で入ります。{'\n'}ここにコメントが入ります。</Text></View>
-        </View>
+  return (<View style={styles.container}><SafeAreaProvider>
+    <SafeAreaView>
+    <><Stack.Screen
+          options={{
+            headerTitle: 'トーク',
+            headerShown: false
+          }} />
+          <View>
+              <View style={styles.LiveHeaderPart}>
+                  <LiveTop />
+                  <LiveGenre />
+              </View>
+          </View></>
+          </SafeAreaView>
+    </SafeAreaProvider>
+    <SafeAreaProvider style={styles.container2}>
+        <SafeAreaView>
+        <View style={styles.LiveFooterPart}>
+              <LiveFooter />
+              </View>
+        </SafeAreaView>
+    </SafeAreaProvider>
     </View>
-</View>
 
   )
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#ffffff'
+    backgroundColor: 'rgba(0, 0, 0, 0)',
+    flex: 1
   },
-  Flame: {
-    backgroundColor: 'blue',
-    flex: 1.0,
+  container2: {
+    backgroundColor: 'rgba(0, 0, 0, 0)',
+    flex: 1,
     justifyContent: 'flex-end'
   },
-  Position: {
-    alignItems: 'center',
-    marginLeft: 15,
-    flexDirection: 'row',
-    bottom: 100,
-    marginBottom: 5
+
+  LiveHeaderPart: {
+    top: 15
+
   },
-  Icon: {
-    height: 25,
-    width: 25,
-    backgroundColor: '#ffffff',
-    borderRadius: 13
-  },
-  Text:{
-    marginLeft: 5,
+  LiveFooterPart: {
+    position: 'relative',
+    bottom: 0
   }
+
 })
 
 export default LiveCommerce
